@@ -32,16 +32,6 @@ body {
     z-index: 6;
 }
 
-/* .slides-navigation a.prev {
-    left: 5px;
-    background-image: url(../img/icons/prev.png);
-}
-
-.slides-navigation a.next {
-    right: 5px;
-    background-image: url(../img/icons/next.png);
-} */
-
 .titleMessage{
     position: absolute;
     width: 100%;
@@ -111,6 +101,60 @@ body {
     content: '%';
 }
 
-h4 {
+.skill h4 {
     margin-top: 20px;
+}
+
+.squareItem {
+    margin-top: 30px;
+    position: relative;
+}
+
+.squareInnerContainer {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid black;
+    border-top: none;
+}
+
+.squareInnerContainer:before,
+.squareInnerContainer:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 30%;
+    border-bottom: 2px solid black
+}
+
+.squareInnerContainer:before {
+    right: 0px;
+}
+
+.squareInnerContainer:after {
+    left: 0px;
+}
+
+.squareContent h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: black;
+}
+
+.squareContent h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.squareIcon {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 40%;
+    height: 60px;
+    font-size: 56px;
+    margin-left: -20%;
+    color: black;
 }
