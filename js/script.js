@@ -1,3 +1,18 @@
+$(window).on("load", function() {
+    $(".loader .inner").fadeOut(500, function() {
+        $(".loader").fadeOut(700);
+    });
+
+    $(".items").isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 1500,
+            easing: 'linear',
+            queue: false
+        }
+    });
+});
+
 $(document).ready(function(){
 
     $('#slides').superslides({
@@ -72,15 +87,6 @@ $(document).ready(function(){
     $(".first").height($(".second").height()); //for making height of stats container same
 
     $("[data-fancybox]").fancybox();
-
-    $(".items").isotope({
-        filter: '*',
-        animationOptions: {
-            duration: 1500,
-            easing: 'linear',
-            queue: false
-        }
-    });
 
     $("#filters a").click(function(){
         $("#filters .current").removeClass("current");
