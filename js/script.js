@@ -30,6 +30,9 @@ $(document).ready(function(){
 
     $('.owl-carousel').owlCarousel({
         loop:true,
+        autoplay: true,
+        autoplayTimeout: 1500,
+        autoplayHoverPause: true,
         items: 4,
         responsive:{
             0:{
@@ -112,7 +115,7 @@ $(document).ready(function(){
 
         var targetElement = $(this).attr("href");
         var targetPosition = $(targetElement).offset().top;
-        $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow")
+        $("html, body").animate({ scrollTop: targetPosition - 80 }, "slow")
     });
 
     const nav = $("#navigation");
