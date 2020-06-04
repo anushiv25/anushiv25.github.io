@@ -259,7 +259,7 @@ body {
 }
 
 .items .icons i {
-    color: black;
+    color: white;
     font-size: 20px;
     margin-top: 9px;
 }
@@ -301,11 +301,16 @@ body {
 .items .openButton {
     float: left;
     left: -200px;
+    background-color: black;
+    /* color: white; */
+    border-radius: 20px;
 }
 
 .items .projectLink {
     float: right;
     right: -200px;
+    background-color: black;
+    border-radius: 20px;
 }
 
 .items .item:hover .openButton {
