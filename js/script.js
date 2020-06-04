@@ -71,7 +71,6 @@ $(document).ready(function(){
 
         if(!countupfinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) {            
             $('.count').each(function () {
-                console.log("here");
                 $(this).prop('Counter',0).animate({
                     Counter: $(this).text()
                 }, {
