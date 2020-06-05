@@ -64,6 +64,8 @@ body {
     max-width: 70%;
 }
 
+
+
 .skillsSection,
 .portfolioSection {
     background-color: black;
@@ -352,6 +354,18 @@ body {
 
 #navigation li a {
     color: #fff;
+}
+
+#navigation .hoverEffect {
+    background: white;
+    color:black ;
+    border-radius: 20px;
+    
+    -webkit-transform: scale(1.10, 1.10);
+    -moz-transform: scale(1.10, 1.10);
+    -o-transform: scale(1.10, 1.10);
+    -ms-transform: scale(1.10, 1.10);
+    -transform: scale(1.10, 1.10);
 }
 
 #navigation li a:hover {

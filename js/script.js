@@ -114,12 +114,23 @@ $(document).ready(function(){
 
         var targetElement = $(this).attr("href");
         var targetPosition = $(targetElement).offset().top;
-        $("html, body").animate({ scrollTop: targetPosition - 80 }, "slow")
+        $("html, body").animate({ scrollTop: targetPosition - 70 }, "slow")
     });
 
     const nav = $("#navigation");
-    const navTop = nav.offset().top;
+    const about = $("#about");
+    const skills = $("#skills");
+    const stats = $("#stats");
+    const portfolio = $("#portfolio");
+    const contact = $("#contact");
 
+    const navTop = nav.offset().top;
+    const aboutTop = about.offset().top;
+    const skillsTop = skills.offset().top;
+    const statsTop = stats.offset().top;
+    const portfolioTop = portfolio.offset().top;
+    const contactTop = contact.offset().top;
+    
     $(window).on("scroll", stickyNavigation);
 
     function stickyNavigation() {
@@ -134,6 +145,37 @@ $(document).ready(function(){
             body.css("padding-top", 0);
             body.removeClass("fixedNav");
         }
+        
+        if(($(window).scrollTop() + 80)>= aboutTop && ($(window).scrollTop() <= skillsTop - 200)) {
+            
+            $( ".aboutHover" ).addClass("hoverEffect");
+            
+        }
+        else if(($(window).scrollTop() + 150)>= skillsTop && ($(window).scrollTop() <= statsTop - 200)) {
+            
+            $( ".skillsHover" ).addClass("hoverEffect");
+            
+        }
+        else if(($(window).scrollTop() + 100)>= statsTop && ($(window).scrollTop() <= portfolioTop - 200)) {
+            
+            $( ".statsHover" ).addClass("hoverEffect");
+            
+        }
+        else if(($(window).scrollTop() + 100)>= portfolioTop && ($(window).scrollTop() <= contactTop - 200)) {
+            
+            $( ".portfolioHover" ).addClass("hoverEffect");
+            
+        }
+        else if(($(window).scrollTop() + 150)>= contactTop && ($(window).scrollTop() <= contactTop)) {
+            console.log("constactTop : ",contactTop);
+            console.log("window : ",$(window).scrollTop());
+            $( ".contactHover" ).addClass("hoverEffect");
+            
+        }
+        else {
+            $( ".nav-link" ).removeClass("hoverEffect");
+        }
+
     }
 
 });
