@@ -145,7 +145,7 @@ $(document).ready(function(){
             body.css("padding-top", 0);
             body.removeClass("fixedNav");
         }
-        
+        var county = 0;
         if(($(window).scrollTop() + 80)>= aboutTop && ($(window).scrollTop() <= skillsTop - 200)) {
             
             $( ".aboutHover" ).addClass("hoverEffect");
@@ -161,12 +161,12 @@ $(document).ready(function(){
             $( ".statsHover" ).addClass("hoverEffect");
             
         }
-        else if(($(window).scrollTop() + 100)>= portfolioTop && ($(window).scrollTop() <= contactTop - 200)) {
+        else if(($(window).scrollTop() + 100)>= portfolioTop && ($(window).scrollTop() <= contactTop - $(window).height())) {
             
             $( ".portfolioHover" ).addClass("hoverEffect");
             
         }
-        else if(($(window).scrollTop() + 150)>= contactTop && ($(window).scrollTop() <= contactTop)) {
+        else if(($(window).scrollTop()>= (contactTop - $(window).height() + 100) && ($(window).scrollTop() <= contactTop))) {
             console.log("constactTop : ",contactTop);
             console.log("window : ",$(window).scrollTop());
             $( ".contactHover" ).addClass("hoverEffect");
@@ -176,7 +176,8 @@ $(document).ready(function(){
             $( ".nav-link" ).removeClass("hoverEffect");
         }
 
+
+
     }
 
 });
-
