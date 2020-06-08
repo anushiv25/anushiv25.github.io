@@ -3,6 +3,7 @@ body {
     color: #333;
     background-color: #fff;
     letter-spacing: 1px;
+    overflow-x: hidden;
 }
 
 .overlay {
