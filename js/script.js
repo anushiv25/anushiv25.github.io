@@ -147,28 +147,27 @@ $(document).ready(function(){
         }
         var county = 0;
         if(($(window).scrollTop() + 80)>= aboutTop && ($(window).scrollTop() <= skillsTop - 200)) {
-            
+            $( ".nav-link" ).removeClass("hoverEffect");
             $( ".aboutHover" ).addClass("hoverEffect");
             
         }
-        else if(($(window).scrollTop() + 150)>= skillsTop && ($(window).scrollTop() <= statsTop - 200)) {
-            
+        else if(($(window).scrollTop() + 150)>= skillsTop && ($(window).scrollTop() <= statsTop - 100)) {
+            $( ".nav-link" ).removeClass("hoverEffect");
             $( ".skillsHover" ).addClass("hoverEffect");
             
         }
-        else if(($(window).scrollTop() + 100)>= statsTop && ($(window).scrollTop() <= portfolioTop - 200)) {
-            
+        else if(($(window).scrollTop() + 100)>= statsTop && ($(window).scrollTop() <= portfolioTop - 100)) {
+            $( ".nav-link" ).removeClass("hoverEffect");
             $( ".statsHover" ).addClass("hoverEffect");
             
         }
-        else if(($(window).scrollTop() + 100)>= portfolioTop && ($(window).scrollTop() <= contactTop - $(window).height())) {
-            
+        else if(($(window).scrollTop() + 100)>= portfolioTop && ($(window).scrollTop() <= contactTop - $(window).height() + 150)) {
+            $( ".nav-link" ).removeClass("hoverEffect");
             $( ".portfolioHover" ).addClass("hoverEffect");
             
         }
-        else if(($(window).scrollTop()>= (contactTop - $(window).height() + 100) && ($(window).scrollTop() <= contactTop))) {
-            console.log("constactTop : ",contactTop);
-            console.log("window : ",$(window).scrollTop());
+        else if(($(window).scrollTop()>= contactTop - 500)) {
+            $( ".nav-link" ).removeClass("hoverEffect");
             $( ".contactHover" ).addClass("hoverEffect");
             
         }
